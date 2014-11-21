@@ -56,4 +56,5 @@ Will add
 * Sublime Text 3
 * LibreOffice (already included in most distros)
 * Tweak Tools (depending on DE)
+* zip, unzip
 * *anything suggested*
