@@ -19,15 +19,15 @@ def ppa_link_validator(value):
 
 
 class PPA(models.Model):
-    ppa_link = models.CharField(validators=[ppa_link_validator])
-    latest_version = models.CharField()
+    ppa_link = models.CharField(max_length=255, validators=[ppa_link_validator])
+    latest_version = models.CharField(max_length=34)
 
     class Meta:
         verbose_name = _("ppa")
 
 
 class Custom(models.Model):
-    setup_script_url = models.CharField()
+    setup_script_url = models.CharField(max_length=255)
 
     class Meta:
         verbose_name = _("custom")

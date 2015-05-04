@@ -1,9 +1,15 @@
 # do not track playground scripts
 playground-scripts/
 
-/links
+#links
 Link to*
 
-/environment
+#environment
 .idea/
 .venv/
+
+#database
+*.sqlite3
+
+#pycache
+__pycache__
