@@ -1,2 +1,9 @@
 # do not track playground scripts
 playground-scripts/
+
+/links
+Link to*
+
+/environment
+.idea/
+.venv/
