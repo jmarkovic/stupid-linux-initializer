@@ -14,7 +14,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Custom',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, verbose_name='ID', primary_key=True)),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
+                ('name', models.CharField(max_length=255)),
+                ('description', models.TextField(default='no description')),
+                ('keyword', models.CharField(max_length=64)),
                 ('setup_script_url', models.CharField(max_length=255)),
             ],
             options={
@@ -24,8 +27,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='PPA',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, verbose_name='ID', primary_key=True)),
-                ('ppa_link', models.CharField(max_length=255, validators=[app.models.ppa_link_validator])),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
+                ('name', models.CharField(max_length=255)),
+                ('description', models.TextField(default='no description')),
+                ('keyword', models.CharField(max_length=64)),
+                ('ppa_link', models.CharField(validators=[app.models.ppa_link_validator], max_length=255)),
                 ('latest_version', models.CharField(max_length=34)),
             ],
             options={
